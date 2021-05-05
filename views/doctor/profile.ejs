@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Edit Profile</title>
+</head>
+
+<body>
+	<h2>Edit Profile</h2>
+
+	<a href="/doctor">Home</a>|
+	<a href="/logout">Logout</a><br><br>
+	<a href="/doctor/profile">Edit Profile</a><br>
+	<a href="/doctor/pendingCustomers">Pending Customer</a><br>
+	<a href="/doctor/pendingReceptionist">Pending receptionist </a><br>
+	<a href="/doctor/view_Available">House to-let</a><br>
+	<a href="/doctor/view_Patient">Available patient</a><br>
+	<a href="/doctor/view_Owners">Receptionist</a><br>
+	<a href="/doctor/view_Rented">Rented Apartments</a><br>
+
+	<form method="post">
+		<table border="1">
+			<tr>
+				<td>First Name: </td>
+				<td><input type="text" name="fname" value="<%= user.fname %>" required></td>
+			</tr>
+			<tr>
+				<td>Last Name: </td>
+				<td> <input type="text" name="lname" value="<%= user.lname %>" required></td>
+			</tr>
+			<tr>
+				<td>Prefered Username: </td>
+				<td> <input type="text" name="uname" value="<%= user.username %>" readonly></td>
+			</tr>
+			<tr>
+				<td>Father's name: </td>
+				<td> <input type="text" name="fathersName" value="<%= user.fathersName%>" required></td>
+			</tr>
+			<tr>
+				<td>Mail: </td>
+				<td> <input type="text" name="email" value="<%= user.email %>" required></td>
+			</tr>
+			<tr>
+				<td>Area: </td>
+				<td> <input type="text" name="area" value="<%= user.area %>" readonly></td>
+			</tr>
+			<tr>
+				<td>Phone No: </td>
+				<td> <input type="text" name="phone" value="<%= user.phone %>" required></td>
+			</tr>
+			<tr>
+				<td>National ID: </td>
+				<td> <input type="text" name="nid" value="<%= user.nid %>" required></td>
+			</tr>
+			<tr>
+				<td>Password: </td>
+				<td> <input type="password" name="password" value="<%= user.password %>" required></td>
+			</tr>
+			<tr>
+				<td>Confirm Password:</td>
+				<td> <input type="password" name="cpassword" value="<%= user.password %>" required></td>
+			</tr>
+		</table>
+		<input type="submit" name="" value="update">
+	</form>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Receptionist</title>
+</head>
+
+<body>
+	<div>
+		<h2>Receptionist</h2>
+	</div>
+
+	<a href="/admin">home</a>|
+	<a href="/logout">Logout</a><br><br>
+	<a href="/admin/profile">Edit Profile</a><br>
+	<a href="/admin/addNewDoctor">Add New Doctor</a><br>
+	<a href="/admin/assignDoctor">Assign Doctor</a><br>
+	<a href="/admin/view_Doctor">Doctor</a><br>
+	<a href="/admin/view_Receptionist">Receptionist</a><br>
+	<a href="/admin/view_Patient">Patient</a><br>
+	<a href="/admin/view_Booked">Booked slot</a><br>
+	<a href="/admin/view_Available">Available slot</a><br>
+
+	<table border="1">
+		<tr>
+			<td>Id</td>
+			<td>USERNAME</td>
+			<td>password</td>
+			<td>Email</td>
+			<td>Blood Group</td>
+			<td>Phone Number</td>
+			<td>Profile Pic</td>
+			<td>Type</td>
+			<td>status</td>
+		</tr>
+		<% for(var i=0; i < userlist.length; i++){ %>
+		<tr>
+			<td><%= userlist[i].id %></td>
+		
+			<td><%= userlist[i].username %></td>
+			
+			<td><%= userlist[i].password%></td>
+			<td><%= userlist[i].email %></td>
+			<td><%= userlist[i].bloodgroup%></td>
+			<td><%= userlist[i].phonenumber %></td>
+			<td><%= userlist[i].profilepic%></td>
+			<td><%= userlist[i].type%></td>
+			<td><%= userlist[i].status %></td>
+			<td>
+				<a href="/admin/view_Receptionist/<%= userlist[i].username%>">View Profile </a>
+			</td>
+		</tr>
+		<%  } %>
+	</table>
+
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Owners</title>
+</head>
+
+<body>
+	<div>
+		<h2>Owners</h2>
+	</div>
+
+	<a href="/manager">Home</a>|
+	<a href="/logout">Logout</a><br><br>
+	<a href="/manager/profile">Edit Profile</a><br>
+	<a href="/manager/pendingCustomers">Pending Customer</a><br>
+	<a href="/manager/pendingHouseowners">Pending Houseowners </a><br>
+	<a href="/manager/view_Available">House to-let</a><br>
+	<a href="/manager/view_Customers">Available customer</a><br>
+	<a href="/manager/view_Owners">House Owners</a><br>
+	<a href="/manager/view_Rented">Rented Apartments</a><br>
+
+	<table border="1">
+		<tr>
+			<td>First Name</td>
+			<td>Last Name</td>
+			<td>USERNAME</td>
+			<td>Email</td>
+			<td>Phone</td>
+			<td>Nid</td>
+			<td>No of report</td>
+			<td>status</td>
+		</tr>
+		<% for(var i=0; i < userlist.length; i++){ %>
+		<tr>
+			<td><%= userlist[i].fname %></td>
+			<td><%= userlist[i].lname %></td>
+			<td><%= userlist[i].username %></td>
+			<td><%= userlist[i].email %></td>
+			<td><%= userlist[i].phone %></td>
+			<td><%= userlist[i].nid %></td>
+			<td><%= userlist[i].reportNo %></td>
+			<td><%= userlist[i].status %></td>
+			<td>
+				<a href="/manager/view_Owners/<%= userlist[i].username %>">View Profile </a>
+			</td>
+		</tr>
+		<%  } %>
+	</table>
+
+</body>
+
+</html>

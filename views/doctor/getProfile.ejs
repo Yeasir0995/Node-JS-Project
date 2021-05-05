@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>manager page</title>
+</head>
+
+<body>
+	<a href="/doctor">Home</a>|
+	<a href="/logout">Logout</a><br><br>
+	<a href="/doctor/profile">Edit Profile</a><br>
+	<a href="/doctor/pendingPatient">Pending Customer</a><br>
+	<a href="/doctor/pendingReceptionist">Pending Houseowners </a><br>
+	<a href="/doctor/view_Available">House to-let</a><br>
+	<a href="/doctor/view_Patient">Available customer</a><br>
+	<a href="/doctor/view_Receptionist">House Owners</a><br>
+	<a href="/doctor/view_Rented">Rented Apartments</a><br>
+	<%= user.username %><br>
+	<a href="/doctor/view_Rented">Message</a>|
+	<% if(user.status=="block"){ %>
+	<a href="/doctor/<%= table%>/<%= user.username %>">Unblock</a>
+	<%  } else{ %>
+	<a href="/doctor/<%= table%>/<%= user.username %>">Block</a>
+	<%  }%>
+	<h1>Profile information</h1>
+	First Name: <%= user.fname %> <br>
+	Last Name: <%= user.lname %> <br>
+	Father's Name: <%= user.fathersName %> <br>
+	Assigned Area: <%= user.area %> <br>
+	Email: <%= user.email %> <br>
+	phone: <%= user.phone %> <br>
+	National ID: <%= user.nid %> <br>
+	Password: <%= user.password %> <br>
+</body>
+
+</html>
